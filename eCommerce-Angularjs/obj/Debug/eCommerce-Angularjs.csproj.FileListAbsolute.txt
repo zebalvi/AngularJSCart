@@ -39,3 +39,44 @@ E:\Work\eCommerce\eCommerce-Angularjs\eCommerce-Angularjs\bin\System.Web.Http.We
 E:\Work\eCommerce\eCommerce-Angularjs\eCommerce-Angularjs\obj\Debug\eCommerce-Angularjs.csprojResolveAssemblyReference.cache
 E:\Work\eCommerce\eCommerce-Angularjs\eCommerce-Angularjs\obj\Debug\eCommerce-Angularjs.dll
 E:\Work\eCommerce\eCommerce-Angularjs\eCommerce-Angularjs\obj\Debug\eCommerce-Angularjs.pdb
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\ApplicationInsights.config
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\csc.exe
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\vbc.exe
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\eCommerce-Angularjs.dll.config
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\eCommerce-Angularjs.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\eCommerce-Angularjs.pdb
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.Web.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Newtonsoft.Json.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\System.Net.Http.Formatting.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\System.Web.Http.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\System.Web.Http.WebHost.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.Web.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\Newtonsoft.Json.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\System.Net.Http.Formatting.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\System.Web.Http.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\bin\System.Web.Http.WebHost.xml
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\obj\Debug\eCommerce-Angularjs.csprojResolveAssemblyReference.cache
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\obj\Debug\eCommerce-Angularjs.dll
+C:\Users\Jahan\Documents\GIT Repo\AngularJSCart\eCommerce-Angularjs\obj\Debug\eCommerce-Angularjs.pdb
