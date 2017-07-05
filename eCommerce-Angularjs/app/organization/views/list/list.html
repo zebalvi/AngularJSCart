@@ -1,0 +1,510 @@
+﻿<!-- Detached content -->
+<div class="container-detached">
+    <div class="content-detached">
+        <span class="label border-left-success label-striped bg-white" style="font-size: 14px;font-weight: normal;letter-spacing: 0.5px;text-transform: capitalize; background-color: #000;">
+            <a ui-sref="organization.master.cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1" class="text-white">
+                <i class="icon-cart" />
+                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+            </a>
+        </span>
+        <!-- Pagination -->
+        <div class="text-center content-group-lg pull-right">
+            <ul class="pagination">
+                <li><button type="button" class="btn btn-default" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="icon-arrow-small-left"></i></button></li>
+                <li><button type="button" class="btn btn-default">{{currentPage+1}} of {{numberOfPages()}}</button> </li>
+                <li><button type="button" class="btn btn-default" ng-disabled="currentPage >= vm.items.length/pageSize - 1" ng-click="currentPage=currentPage+1"><i class="icon-arrow-small-right"></i></button></li>
+            </ul>
+        </div>
+        <!-- /pagination -->
+        <!--List-->
+        <ul class="media-list">
+            <li>
+                <div class="has-feedback has-feedback-left form-group">
+                    <input type="search" class="form-control" placeholder="Search..." ng-model="search">
+                    <div class="form-control-feedback" style="top: 25px;">
+                        <i class="icon-search4 text-size-small text-muted"></i>
+                    </div>
+                </div>
+                <!--<input  class="ng-valid ng-dirty ng-valid-parse ng-not-empty ng-touched" style="top:10px;position:relative;width:100%;padding:10px;border-radius:5px;border: none;border-bottom: 1px solid red;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;font-size: 19px;color: gray;">-->
+            </li>
+            <li class="media panel panel-body stack-media-on-mobile" ng-repeat="item in vm.items | orderBy:'name' | filter:search | startFrom:currentPage*pageSize | limitTo:pageSize" ng-if="vm.items.length > 0">
+                <a ng-href="{{item.image}}"  class="media-left" data-popup="lightbox">
+                    <img ng-src="{{item.image}}" width="96" alt="">
+                </a>
+
+                <div class="media-body">
+                    <h6 class="media-heading text-semibold">
+                        <a>{{item.name}}</a>
+                    </h6>
+
+                    <ul class="list-inline list-inline-separate mb-10">
+                        <li><a class="text-muted">Sports</a></li>
+                        <li><a class="text-muted">Winter sports</a></li>
+                    </ul>
+
+                    <p class="content-group-sm">{{item.description}}</p>
+
+                    <ul class="list-inline list-inline-separate">
+                        <li>All items from <a>Adidas</a></li>
+                        <li>Add to <a>wishlist</a></li>
+                    </ul>
+                </div>
+
+                <div class="media-right text-center">
+                    <h3 class="no-margin text-semibold">${{item.price}}</h3>
+
+                    <div class="text-nowrap">
+                        <i class="icon-star-full2 text-size-base text-warning-300"></i>
+                        <i class="icon-star-full2 text-size-base text-warning-300"></i>
+                        <i class="icon-star-full2 text-size-base text-warning-300"></i>
+                        <i class="icon-star-full2 text-size-base text-warning-300"></i>
+                        <i class="icon-star-full2 text-size-base text-warning-300"></i>
+                    </div>
+
+                    <div class="text-muted">{{item.review}} reviews</div>
+
+                    <button type="button" class="btn bg-teal-400 mt-15" ng-click="cart.addItem(item.sku, item.name, item.price, 1);"><i class="icon-cart-add position-left"></i> Add to cart</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- /list -->
+        <!-- Pagination -->
+        <div class="text-center content-group-lg pull-right">
+            <ul class="pagination">
+                <li><button type="button" class="btn btn-default" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="icon-arrow-small-left"></i></button></li>
+                <li><button type="button" class="btn btn-default">{{currentPage+1}} of {{numberOfPages()}}</button> </li>
+                <li><button type="button" class="btn btn-default" ng-disabled="currentPage >= vm.items.length/pageSize - 1" ng-click="currentPage=currentPage+1"><i class="icon-arrow-small-right"></i></button></li>
+            </ul>
+        </div>
+        <!-- /pagination -->
+
+    </div>
+</div>
+
+
+<!-- /detached content -->
+<!-- Detached sidebar -->
+<div class="sidebar-detached">
+    <div class="sidebar sidebar-default sidebar-separate">
+        <div class="sidebar-content">
+
+            <!-- Categories -->
+            <div class="sidebar-category">
+                <div class="category-title category-collapsed">
+                    <span>Categories</span>
+                    <ul class="icons-list">
+                        <li><a data-action="collapse" class="rotate-180"></a></li>
+                    </ul>
+                </div>
+
+                <div class="category-content">
+                    <div class="has-feedback has-feedback-left form-group">
+                        <input type="search" class="form-control" placeholder="Search...">
+                        <div class="form-control-feedback">
+                            <i class="icon-search4 text-size-small text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-content no-padding">
+                    <ul class="navigation navigation-alt navigation-accordion navigation-sm no-padding-top">
+                        <li class="active">
+                            <a class="has-ul">Street wear</a>
+
+                            <ul>
+                                <li><a>Hoodies</a></li>
+                                <li><a>Jackets</a></li>
+                                <li class="active"><a>Pants</a></li>
+                                <li><a>Shirts</a></li>
+                                <li><a>Sweaters</a></li>
+                                <li><a>Tank tops</a></li>
+                                <li><a>Underwear</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="has-ul">Snow wear</a>
+
+                            <ul class="hidden-ul">
+                                <li><a>Fleece jackets</a></li>
+                                <li><a>Gloves</a></li>
+                                <li><a>Ski jackets</a></li>
+                                <li><a>Ski pants</a></li>
+                                <li><a>Snowboard jackets</a></li>
+                                <li><a>Snowboard pants</a></li>
+                                <li><a>Technical underwear</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="has-ul">Shoes</a>
+
+                            <ul class="hidden-ul">
+                                <li><a>Laces</a></li>
+                                <li><a>Sandals</a></li>
+                                <li><a>Skate shoes</a></li>
+                                <li><a>Slip ons</a></li>
+                                <li><a>Sneakers</a></li>
+                                <li><a>Winter shoes</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="has-ul">Accessories</a>
+
+                            <ul class="hidden-ul">
+                                <li><a>Beanies</a></li>
+                                <li><a>Belts</a></li>
+                                <li><a>Caps</a></li>
+                                <li><a>Sunglasses</a></li>
+                                <li><a>Headphones</a></li>
+                                <li><a>Video cameras</a></li>
+                                <li><a>Wallets</a></li>
+                                <li><a>Watches</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /categories -->
+            <!-- Filter -->
+            <div class="sidebar-category">
+                <div class="category-title category-collapsed">
+                    <span>Filter products</span>
+                    <ul class="icons-list">
+                        <li><a data-action="collapse" class="rotate-180"></a></li>
+                    </ul>
+                </div>
+
+                <div class="category-content">
+                    <form action="#">
+                        <div class="form-group">
+                            <div class="has-feedback has-feedback-left form-group">
+                                <input type="search" class="form-control" placeholder="Search brand">
+                                <div class="form-control-feedback">
+                                    <i class="icon-search4 text-size-small text-muted"></i>
+                                </div>
+                            </div>
+
+                            <div class="has-scroll">
+                                <div class="checkbox">
+                                    <label class="display-block">
+                                        <input type="checkbox" class="styled">
+                                        686
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label class="display-block">
+                                        <input type="checkbox" class="styled">
+                                        A.Lab
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label class="display-block">
+                                        <input type="checkbox" class="styled">
+                                        Adidas
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label class="display-block">
+                                        <input type="checkbox" class="styled">
+                                        ALIS
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label class="display-block">
+                                        <input type="checkbox" class="styled">
+                                        Analog
+                                    </label>
+                                </div>
+                                
+                                <div class="checkbox">
+                                    <label class="display-block">
+                                        <input type="checkbox" class="styled">
+                                        O'Neill
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend class="text-size-mini text-muted no-border no-padding">Items for</legend>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Men
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Women
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Kids
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Unisex
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend class="text-size-mini text-muted no-border no-padding">Size</legend>
+
+                            <div class="row row-labels">
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">XXS</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">XS</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">S</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-warning text-warning-800">M</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">L</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">XL</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">XXL</a></div>
+                                <div class="col-xs-3"><a class="label label-flat border-grey text-grey-800">XXXL</a></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend class="text-size-mini text-muted no-border no-padding">Fit</legend>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Slim fit
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Skinny fit
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Regular fit
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Loose fit
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Long cut
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend class="text-size-mini text-muted no-border no-padding">Color</legend>
+
+                            <div class="row row-colors">
+                                <div class="col-xs-4">
+                                    <a class="bg-primary"></a>
+                                    <span>Blue</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-warning"></a>
+                                    <span>Orange</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-teal"></a>
+                                    <span>Teal</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-pink">
+                                        <i class="icon-checkmark3"></i>
+                                    </a>
+                                    <span>Pink</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-grey-800"></a>
+                                    <span>Black</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-purple"></a>
+                                    <span>Purple</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-success"></a>
+                                    <span>Green</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-danger"></a>
+                                    <span>Red</span>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <a class="bg-info"></a>
+                                    <span>Cyan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend class="text-size-mini text-muted no-border no-padding">Features</legend>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Crew neck
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Chest pocket
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Raglan sleeves
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Polo neck
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    V-neck
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    High collar
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Hood
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Button strip
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Wide neck
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Kangaroo pocket
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend class="text-size-mini text-muted no-border no-padding">Material features</legend>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Canvas
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Lined
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Merino
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Quick drying
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Stretch
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Water repellent
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="display-block">
+                                    <input type="checkbox" class="styled">
+                                    Windproof
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn bg-blue btn-block">Filter</button>
+                    </form>
+                </div>
+            </div>
+            <!-- /filter -->
+
+        </div>
+    </div>
+</div>
+<!-- /detached sidebar -->

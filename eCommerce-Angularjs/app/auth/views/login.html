@@ -1,0 +1,80 @@
+﻿<div class="page-container">
+    <!-- Page content -->
+    <div class="page-content">
+        <!-- Main content -->
+        <div class="content-wrapper" ui-view="master">
+            <!-- Tabbed form -->
+            <div class="tabbable panel login-form width-400">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="login active"><a ui-sref="login"><h6>Login</h6></a></li>
+                    <li class="register"><a ui-sref="register"><h6>Register</h6></a></li>
+                </ul>
+                <div class="tab-content panel-body">
+                    <div class="tab-pane active">
+                        <form name="userForm" class="form-horizontal form-validate-jquery" action="#" novalidate="novalidate">
+                            <fieldset class="content-group">
+                                <div class="text-center">
+                                    <div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
+                                    <h5 class="content-group">Login to your account <small class="display-block">Your credentials</small></h5>
+                                </div>
+
+                                <!-- Email field -->
+                                <div class="form-group has-feedback has-feedback-left">
+                                    <div class="col-lg-12">
+                                        <input type="email" name="email" class="form-control" id="email" ng-model="vm.email" required="required" placeholder="Username" aria-required="true">
+                                        <div class="form-control-feedback" style="margin-top: 2px; color:#999;">
+                                            <i class="icon-user"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /email field -->
+                                <!-- Password field -->
+                                <div class="form-group has-feedback has-feedback-left">
+                                    <div class="col-lg-12">
+                                        <input type="password" name="password" class="form-control" id="pwd" ng-model="vm.password" required="required" placeholder="Password" aria-required="true">
+                                        <div class="form-control-feedback" style="margin-top: 2px;color:#999;">
+                                            <i class="icon-lock2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /password field -->
+                                <!-- Remember Me field -->
+                                <div class="form-group" style="margin: 0px -10px">
+                                    <div class="col-lg-6">
+                                        <label class="checkbox-inline" style="margin: 0px;">
+                                            <div class="checker"><input id="remember-me" class="styled" ng-model="vm.checked" type="checkbox" style="opacity: 1;"></div>
+                                            Remember
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-6 text-right" style="padding-top: 8px;">
+                                        <a href="/account/reset">Forgot password?</a>
+                                    </div>
+                                </div>
+                                <!-- /remember Me field -->
+
+                            </fieldset>
+
+                            <div class="text-center" style="margin-bottom: 15px;">
+                                <button type="button" ng-click="vm.login()" id="login" ng-disabled="(!userForm.$valid)" class="btn btn-primary" style="width: 100%;">Login <i class="icon-arrow-right14 position-right"></i></button>
+                            </div>
+                        </form>
+                        
+
+                        <script>
+                            $(function () {
+                                $("#pwd").keyup(function (event) {
+                                    if (event.keyCode == 13) {
+                                        $("#login").click();
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our <a href="">Terms &amp; Conditions</a> and <a href="">Cookie Policy</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- /tabbed form -->
+        </div>
+    </div>
+</div>

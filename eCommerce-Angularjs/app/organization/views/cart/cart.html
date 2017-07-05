@@ -1,0 +1,83 @@
+﻿<!--Defined Basket Head General Information-->
+<div class="alert alert-info alert-styled-left alert-bordered">
+    <button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button>
+    <span class="text-semibold">Heads up!</span>  Thanks for shopping at the Let'sShop Store. Here you can edit the items,
+    go back to the store, clear the cart, or check out.
+</div>
+
+<div class="panel panel-white">
+    <div class="panel-heading">
+        <h6 class="panel-title text-bold">Order Detail<a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
+        <div class="heading-elements">
+            <ul class="icons-list">
+                <li><a data-action="reload" ui-sref="organization.master.cart"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-responsive">
+
+        <!-- items -->
+        <table class="table table-bordered overflow-hidden">
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th class="text-center">Units</th>
+                    <th class="text-center"><i class="icon-coin-dollar"></i> Price</th>
+                    <th class="text-center" style="width: 20px;"><i class="icon-cog2"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- empty cart message -->
+                <tr ng-hide="cart.getTotalCount() > 0">
+                    <td class="tdCenter" colspan="4">
+                        No items found in Cart!
+                    </td>
+                </tr>
+                <!-- cart items -->
+                <tr class="active border-double" ng-repeat="item in cart.items | orderBy:'name'">
+                    <td>{{item.name}}</td>
+                    <td class="text-center">
+                        <div class="input-append">
+                            <!-- use type=tel instead of  to prevent spinners -->
+                            <input class="span3 text-center" type="number"
+                                   ng-model="item.quantity"
+                                   ng-change="cart.saveItems()" />
+                        </div>
+                    </td>
+                    <td class="text-center">{{item.price * item.quantity | currency}}</td>
+                    <td class="text-center" title="remove from cart">
+                        <a data-action="reload" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)">
+                            <i class="icon-trash" />
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- footer -->
+                <tr class="well">
+                    <td><b>Total</b></td>
+                    <td class="text-center"><b>{{cart.getTotalCount()}}</b></td>
+                    <td class="text-center"><b>{{cart.getTotalPrice() | currency}}</b></td>
+                    <td class="text-center" />
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- buttons -->
+<div class="pull-left">
+    <button type="button" class="btn btn-default" ui-sref="organization.master.list">
+        <i class="icon-point-left mr-5" />Back to Store
+    </button>
+</div>
+<div class="pull-right">
+    <p class="text-info">
+        <button class="btn btn-danger"
+                ng-click="cart.clearItems()"
+                ng-disabled="cart.getTotalCount() < 1">
+            <i class="icon-trash icon-white" /> Empty Cart
+        </button>
+        <button class="btn btn-success noty-runner" ng-click="vm.checkOut();">
+            <i class="icon-cart5 icon-white" /> Checkout
+        </button>
+    </p>
+</div>
