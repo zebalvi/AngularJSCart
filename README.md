@@ -16,6 +16,7 @@ Features:
  <li>Accurate payment calculation</li>
  <li>Realtime Cart count</li>
  <li>Customizeable UI Implemented</li>
+ <li>Categories and Filters are designed on Products Page.</li>
  <li>Custom data object for additional info/options images</li>
  <li>Fulfilment options</li>
  <li>Easily configurable with PayPal, Authorize.Net, Google Checkout, etc.</li>
