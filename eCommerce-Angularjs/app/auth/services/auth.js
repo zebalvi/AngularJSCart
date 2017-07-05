@@ -138,7 +138,6 @@
                     localStorage.storeObject('auth', result).then(function () {
                         user = angular.copy(result.user);
                         userUpdated();
-                        // logger.log('user ' + result.user.email + ' logged in successfully');
                     });
                     return result.user;
                 } else {
@@ -148,6 +147,8 @@
                 }
             }, function (err) {
                 logger.error('Login succeeded', 'success', 'topRight');
+
+                // only for dummy login implementation
                 var result = {
                     token: {
                         accessToken: "N03YkzKKGbHJZtK1qyBCWTzDSXh6JzGQ7LSG2obfrWrI7w2gQWKexc_D80xzhFuaKnQOYw-OGOBD59iSLz1SE2Nq5WjtmpPCB1OTkPbwI1LnGXw3ZYN7RzqfgdlCoXVdRzzp6C9pnyLnN0W7wNYiiCBuN-eD_bmcHSXdEIT_UP_79EGuY0wr4oBx7cTQKbh3qSprpoCJeaNL86279W7eIzcBbs1P5RHvl-LnCwK-I73aoJTs_YVJ9qyqWGf0rmcATcy6dKqlQWZkr81zrTRZ7Ex4U7UercSWChRP2dsmOTG6WozgbGr1CsOrVfbnoitYbsXHY12Tx9qdLcjD1dOxhTlRs-oARNsxObIyED76NrPK3ctGp6ISYiqgcub9YvEIC4GgFHh-c7wtQWxf3H_9pwC_LfIfRLu_XPy_z4uD79L7RXulFjDBv4OyoPK9A8z653Cq3b_zNxD926Vs1Jq40djypVxx0AMf_meriXHTjgdBClYDQ2wi-1k1Gm34zGWyq3SZWGzTBZDfPGa0W0KV_W4iUMScsbHTw4vOSqLV62ST4OmojhdpzPRmTAUMKdDZxMar7POcKcw6_fRGSlv8Nd3bf-mvNoofSVGR27MBdslp3GqukERNWhyBCazZwxZp",
@@ -155,9 +156,9 @@
                         refreshToken: "9a6400008f270c5bc23508d4c1b89244"
                     },
                     user: {
-                        firstName: "Jahan",
-                        lastName: "Zeb",
-                        email: "jahanzeb@example.com",
+                        firstName: "Guest",
+                        lastName: "Guest",
+                        email: "guest@example.com",
                         userId: "001",
                         avatar: avatarInitials.getAvatarDataUrl("Jahan" + ' ' + "Zeb", '#ffffff', '#013F70')
                     }

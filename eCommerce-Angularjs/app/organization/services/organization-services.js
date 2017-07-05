@@ -26,11 +26,11 @@
 
 
         // create shopping cart
-        var myCart = new shoppingCart("app");
+        var myBasket = new basket("app");
         
         // return data object with cart
         return service = {
-            cart: myCart
+            cart: myBasket
         };     
     }
 })();

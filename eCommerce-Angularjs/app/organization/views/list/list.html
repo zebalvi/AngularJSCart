@@ -2,9 +2,9 @@
 <div class="container-detached">
     <div class="content-detached">
         <span class="label border-left-success label-striped bg-white" style="font-size: 14px;font-weight: normal;letter-spacing: 0.5px;text-transform: capitalize; background-color: #000;">
-            <a ui-sref="organization.master.cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1" class="text-white">
+            <a ui-sref="organization.master.cart" title="go to shopping cart" ng-disabled="cart.getCount() < 1" class="text-white">
                 <i class="icon-cart" />
-                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                <b>{{cart.getCount()}}</b> items, <b>{{cart.getPrice() | currency}}</b>
             </a>
         </span>
         <!-- Pagination -->
@@ -63,7 +63,7 @@
 
                     <div class="text-muted">{{item.review}} reviews</div>
 
-                    <button type="button" class="btn bg-teal-400 mt-15" ng-click="cart.addItem(item.sku, item.name, item.price, 1);"><i class="icon-cart-add position-left"></i> Add to cart</button>
+                    <button type="button" class="btn bg-teal-400 mt-15" ng-click="cart.add(item.id, item.name, item.price, 1);"><i class="icon-cart-add position-left"></i> Add to cart</button>
                 </div>
             </li>
         </ul>

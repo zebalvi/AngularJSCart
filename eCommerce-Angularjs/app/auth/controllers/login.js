@@ -88,7 +88,6 @@
                 localStorage.getObject('auth').then(function (authData) {
                     if (!!authData && !!authData.user) {
                         vm.user = angular.copy(authData.user);
-                        // Below statement is written to redirect user when session exists...
                         if (vm.isLoggedIn) {
                             $state.go('organization.master.list');
                             $('body').removeClass('login-container login-cover');

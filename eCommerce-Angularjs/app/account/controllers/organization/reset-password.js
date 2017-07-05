@@ -30,13 +30,9 @@
             var data = { Email: vm.Email }
             organizationAccountService.resetPassword(data).then(function (success) {
                 if (success) {
-                    vm.showMessage = true;
                 } else {
-                    vm.loading = false;
                 }              
-                // console.log("vm.showMessage= " + vm.showMessage)
             }, function (err) {
-                vm.loading = false;
             });
         }
         

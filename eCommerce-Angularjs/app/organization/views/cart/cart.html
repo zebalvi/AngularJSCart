@@ -28,7 +28,7 @@
             </thead>
             <tbody>
                 <!-- empty cart message -->
-                <tr ng-hide="cart.getTotalCount() > 0">
+                <tr ng-hide="cart.getCount() > 0">
                     <td class="tdCenter" colspan="4">
                         No items found in Cart!
                     </td>
@@ -41,12 +41,12 @@
                             <!-- use type=tel instead of  to prevent spinners -->
                             <input class="span3 text-center" type="number"
                                    ng-model="item.quantity"
-                                   ng-change="cart.saveItems()" />
+                                   ng-change="cart.save()" />
                         </div>
                     </td>
                     <td class="text-center">{{item.price * item.quantity | currency}}</td>
                     <td class="text-center" title="remove from cart">
-                        <a data-action="reload" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)">
+                        <a data-action="reload" ng-click="cart.add(item.id, item.name, item.price, -10000000)">
                             <i class="icon-trash" />
                         </a>
                     </td>
@@ -55,8 +55,8 @@
                 <!-- footer -->
                 <tr class="well">
                     <td><b>Total</b></td>
-                    <td class="text-center"><b>{{cart.getTotalCount()}}</b></td>
-                    <td class="text-center"><b>{{cart.getTotalPrice() | currency}}</b></td>
+                    <td class="text-center"><b>{{cart.getCount()}}</b></td>
+                    <td class="text-center"><b>{{cart.getPrice() | currency}}</b></td>
                     <td class="text-center" />
                 </tr>
             </tbody>
@@ -72,8 +72,8 @@
 <div class="pull-right">
     <p class="text-info">
         <button class="btn btn-danger"
-                ng-click="cart.clearItems()"
-                ng-disabled="cart.getTotalCount() < 1">
+                ng-click="cart.clearBasket()"
+                ng-disabled="cart.getCount() < 1">
             <i class="icon-trash icon-white" /> Empty Cart
         </button>
         <button class="btn btn-success noty-runner" ng-click="vm.checkOut();">
