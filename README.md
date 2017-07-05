@@ -20,7 +20,7 @@ Features:
  <li>Fulfilment options</li>
  <li>Easily configurable with PayPal, Authorize.Net, Google Checkout, etc.</li>
  <li>Realtime Pagination</li>
- <li>Realtime implementation Login/Register/ResetPassword logic in pure AngularJS DI implementation, but login is only working with Dummy data, from exception section.</li>
+ <li>Realtime implementation of Login/Register/ResetPassword logic in pure AngularJS DI way, but login is only working with Dummy data, from exception section only for Demo purposes.</li>
 </ul>
 
 Download on Github
