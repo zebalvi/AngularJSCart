@@ -25,8 +25,8 @@ Features:
 
 Login Details:
 ------------------
-username: demo
-password: demo
+<b>username:</b> demo <br />
+<b>password:</b> demo
 
 Download on Github
 ------------------
