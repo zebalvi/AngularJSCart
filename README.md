@@ -6,6 +6,8 @@ Introduction:
 
 AngularJS Shopping Cart/Basket is tend to be for education purposes only, and local storage is used for keeping data.
 
+Features:
+-----------------------------------------------------------------
 <ul>
  <li>View Items/Products List</li>
   <li>Add Items into Cart/Basket.</li>
