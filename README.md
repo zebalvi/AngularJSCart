@@ -24,6 +24,11 @@ Features:
  <li>Realtime implementation of Login/Register/ResetPassword logic in pure AngularJS DI way, but login is only working with Dummy data, from exception section only for Demo purposes.</li>
 </ul>
 
+Screenshots:
+------------------
+![products-list](https://user-images.githubusercontent.com/29901315/27852563-1cc618d2-6179-11e7-846c-68bff5178ca7.png)
+
+
 Login Details:
 ------------------
 <b>username:</b> demo <br />
