@@ -23,6 +23,11 @@ Features:
  <li>Realtime implementation of Login/Register/ResetPassword logic in pure AngularJS DI way, but login is only working with Dummy data, from exception section only for Demo purposes.</li>
 </ul>
 
+Login Details:
+------------------
+username: demo
+password: demo
+
 Download on Github
 ------------------
 https://github.com/zebalvi/AngularJSCart.git
