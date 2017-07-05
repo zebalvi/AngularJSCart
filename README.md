@@ -17,11 +17,14 @@ AngularJS Shopping Cart/Basket is tend to be for education purposes only, and lo
  <li>Custom data object for additional info/options images</li>
  <li>Fulfilment options</li>
  <li>Easily configurable with PayPal, Authorize.Net, Google Checkout, etc.</li>
+ <li>Realtime Pagination</li>
+ <li>Realtime implementation Login/Register/ResetPassword logic in pure AngularJS DI implementation, but login is only working with Dummy data, from exception section.</li>
 </ul>
 
 Download on Github
 ------------------
 https://github.com/zebalvi/AngularJSCart.git
+
 
 Credit
 ------
