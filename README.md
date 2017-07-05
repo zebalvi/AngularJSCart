@@ -26,7 +26,11 @@ Features:
 
 Screenshots:
 ------------------
+Products/Items:<br>
 ![products-list](https://user-images.githubusercontent.com/29901315/27852563-1cc618d2-6179-11e7-846c-68bff5178ca7.png)
+
+Cart:<br>
+![cart](https://user-images.githubusercontent.com/29901315/27852644-6a273c78-6179-11e7-9c6f-f9bb87f1fff4.jpg)
 
 
 Login Details:
