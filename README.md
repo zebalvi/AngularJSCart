@@ -31,5 +31,5 @@ https://github.com/zebalvi/AngularJSCart.git
 Credit
 ------
 Jahan Zeb <br />
-email: <a href="mailto:zeb.alvi@yahoo.com">zeb.alvi@yahoo.com</a>
+email: <a href="mailto:zeb.alvi@yahoo.com">zeb.alvi@yahoo.com</a> <br />
 LikedIn: <a href="https://www.linkedin.com/in/zebsoftwaredeveloper">zeb.lvi</a>
